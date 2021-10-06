@@ -4,10 +4,10 @@ body{
 }
 
 .verticalStrip {
-    position: fixed;
+     position: fixed; 
     top: 4rem;
     left: 0;
-    width: 40%; 
+    width: 80%; 
     background-color: #6ad5EF;
     height:100%;
   }
@@ -32,11 +32,11 @@ body{
 
 .headline{
     position: relative;
-    left: 6rem;
+    left: 0rem;
     right: 0;
-    width: 30rem;
+    width: 20rem;
     margin-top: 10rem;
-    font-size: 2.5rem;
+   /* font-size: 2.5rem;*/
     font-family: 'Lato', sans-serif;
     color: white;
 }

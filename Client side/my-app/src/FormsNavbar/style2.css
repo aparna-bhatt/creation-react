@@ -63,7 +63,7 @@ input{
     font-family: sans-serif;
     text-decoration: none;
     color: #333;
-    border: 2px solid #ff003b;
+    background-color: rgba(51, 51, 51, 0);
     letter-spacing: 2px;
     text-align: center;
     position: relative;
@@ -82,12 +82,12 @@ input{
     left: 0;
     width: 0;
     height: 100%;
-    background: #ff003b;
+    background: hsl(0, 100%, 100%);
     transition: all .35s;
   }
   
   a.fancy:hover{
-    color: #fff;
+    color: rgb(255, 255, 255);
   }
   
   a.fancy:hover:after{
@@ -103,7 +103,7 @@ input{
     font-family: sans-serif;
     text-decoration: none;
     color: #333;
-    border: 2px solid rgb(15, 196, 15);
+    border: none;
     letter-spacing: 2px;
     text-align: center;
     position: relative;
@@ -122,7 +122,7 @@ input{
     left: 0;
     width: 0;
     height: 100%;
-    background: rgb(15, 196, 15);
+    background: rgb(0, 0, 0);
     transition: all .35s;
   }
   

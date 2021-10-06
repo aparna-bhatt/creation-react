@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 
 function Navbar(){
+
     return(
         <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{overflow:" hidden;padding: 0"}} >
@@ -9,7 +10,7 @@ function Navbar(){
           <a
             className="navbar-brand"
             href="#"
-            style={{fontFamily: "'Lobster', cursive", fontSize: "2.5rem", paddingLeft: "7rem", width: "40%", backgroundColor: "#6ad5ef"}}>creation</a>
+            style={{fontFamily: "'Lobster', cursive", fontSize: "2.5rem", paddingLeft: "7rem", width: "30%", backgroundColor: "#6ad5ef"}}>creation</a>
           <button
             className="navbar-toggler"
             type="button"
@@ -27,7 +28,7 @@ function Navbar(){
                 <a
                   className=" btnsgnIn"
                   aria-current="page"
-                  onClick="openTabpage(event,'SignIn')"
+                  // onClick="openTabpage(event,'SignIn')"
                 >
                   Sign In
               </a>
@@ -36,7 +37,7 @@ function Navbar(){
                 <a
                   className="btnsgnUp"
                   aria-current="page"
-                  onClick="openTabpage(event,'SignUp')"
+                  //onClick={openTabpage}
                 >
                   Sign Up
               </a>
