@@ -1,0 +1,155 @@
+.home-container {
+  display: flex;
+}
+
+.home-left {
+  min-height: 100vh;
+  /* flex-grow: 1; */
+  flex-basis: 33.66%;
+  background-color: rgb(0, 231, 231);
+  padding-left: 100px;
+}
+
+.home-left-logo {
+  height: 10vh;
+  padding: 10px 0;
+}
+.home-left-main-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-left-heading {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.home-left-button {
+}
+
+.home-right {
+  min-height: 100vh;
+  /* flex-grow: 2; */
+  flex-basis: 66.66%;
+}
+
+.home-right-header-container {
+  height: 10vh;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.home-right-header-signup {
+  margin: 0 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.home-right-header-signin {
+  margin: 0 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.home-right-body-container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.home-image-1-container {
+  position: absolute;
+  right: 25vw;
+  z-index: 3;
+}
+.home-image-2-container {
+  position: absolute;
+  right: 13vw;
+  z-index: 2;
+}
+.home-image-3-container {
+  position: absolute;
+  right: 5vw;
+  z-index: 1;
+}
+
+.home-image-1 {
+  width: 20vw;
+  height: auto;
+  box-shadow: rgb(161, 161, 161) 7px 7px 10px;
+}
+
+.home-image-2 {
+  width: 15vw;
+  height: auto;
+  box-shadow: rgb(161, 161, 161) 7px 7px 10px;
+}
+
+.home-image-3 {
+  width: 10vw;
+  height: auto;
+  box-shadow: rgb(161, 161, 161) 7px 7px 10px;
+}
+
+/* Generate Button Style */
+
+.wrapper-home {
+  position: fixed;
+}
+
+.link_wrapper-home {
+  position: relative;
+}
+
+a.fancy-home {
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  background: rgb(0, 0, 0);
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid rgb(14, 14, 14);
+  transition: all 0.35s;
+}
+
+.icon-home {
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.35s;
+}
+
+.icon-home svg {
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #000000;
+  transition: all 0.35s;
+}
+
+a.fancy-home:hover {
+  width: 200px;
+  border: 3px solid #000000;
+  background: transparent;
+  color: #000000;
+}
+
+a.fancy-home:hover + .icon-home {
+  border: 3px solid #000000;
+  right: -25%;
+}
