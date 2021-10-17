@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+.form-container {
+    display: flex;
+  }
+
+  .form-left {
+    min-height: 100vh;
+    /* flex-grow: 1; */
+    flex-basis: 20%;
+    background-color: #6ad5EF;
+    padding-left: 100px;
+  }
+  
+  .form-left-logo {
+    height: 10vh;
+    padding: 10px 0;
+    font-family: 'Lobster', cursive;
+  }
+  .form-left-main-container {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .form-right {
+    min-height: 100vh;
+    /* flex-grow: 2; */
+    flex-basis: 80%;
+  }
+  .form-right-header-container {
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .navi{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+ a.navi:hover{
+    color: red;
+}
+.image-container{
+    display:flex;
+    justify-content: space-around;
+}
+.first-template{
+    box-shadow: rgb(161, 161, 161) 5px;
+}
+.selection{
+    display:flex;
+    justify-content: space-around;
+}
+.first-selection{
+  margin-top:5px;
+}
+.second-selection{
+    margin-top:5px;
+}
+.third-selection{
+    margin-top:5px;
+}
+.btns{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.left-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+

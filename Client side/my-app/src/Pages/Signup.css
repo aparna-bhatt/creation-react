@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.main-cont-signup{
+    display: flex;
+}
+/* left*/
+.left-signup{
+    flex-basis: 25%;
+    background-color:rgb(0, 231, 231) ;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+.signup-logo{
+    font-family: 'Lobster', cursive;
+    height: 10vh;
+    padding: 10px 10;
+}
+.wrapper-signup{
+    position: fixed;
+    top: 60%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+  }
+  .formcont-signup{
+    width: 75%;
+    margin-top: 8rem;
+    padding-left: 20rem;
+}
+  
+ 
+
+  button.fancy1-signup{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    margin-top:-13px;
+    border: none;
+    background: none;
+  }
+  
+  button.fancy1-signup span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  button.fancy1-signup:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:black;
+    color:white;
+    transition: all .35s;
+  }
+
+  button.fancy1-signup:hover{
+    color:white;
+  }
+  
+  button.fancy1-signup:hover:after{
+    width: 100%;
+  }
+  /*form*/
+
+  .right-signup{
+      flex-basis: 75%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: left;
+  }
+  .cont1-signup{
+    margin-left: 2rem;
+    margin-top: 2rem;
+    height: 2rem;
+}
+
+
+
+.tittlebar-signup{
+    width: 100%;
+    margin-left: 0.8rem;
+}
+
+.tittletext-signup{
+    font-family: HK Grotesk,sans-serif;
+    font-size: 2rem;
+    color: #3983fa;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+.subtittletext-signup{
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.25;
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-left: -4rem;
+}
+
+#sgnuptext{
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.25;
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-left: 0.5rem;
+}
+
+
+.btnsub{
+    width: 8rem;
+    margin-left: 6rem;
+    margin-top: 2rem;
+
+}
+
+#create-acc{
+    padding-left: 9rem;
+
+}
+
+.buttonplacer-signup{
+    margin-left: 0;
+}

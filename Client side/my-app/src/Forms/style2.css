@@ -1,6 +1,6 @@
 body{
     background: white
-}
+} 
 
 .verticalStrip {
     position: fixed;
@@ -50,11 +50,17 @@ input{
 .wrapper{
     position: fixed;
     top: 60%;
-    left: 53%;
     transform: translate(-50%, -50%);
+    width:200px;
+    left:131px;
+  }
+  button{
+      outline: none;
+      border: none;
+      text-decoration: none;
   }
   
-  a.fancy{
+  .fancy{
     display: block;
     width: 200px;
     height: 40px;
@@ -63,38 +69,38 @@ input{
     font-family: sans-serif;
     text-decoration: none;
     color: #333;
-    border: 2px solid #ff003b;
     letter-spacing: 2px;
     text-align: center;
     position: relative;
     transition: all .35s;
   }
   
-  a.fancy span{
+  .fancy{
     position: relative;
     z-index: 2;
   }
   
-  a.fancy:after{
+  .fancy:after{
     position: absolute;
     content: "";
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background: #ff003b;
+    background: #ffff;
+    color:black;
     transition: all .35s;
   }
   
-  a.fancy:hover{
-    color: #fff;
+  .fancy:hover{
+    color:black;
   }
   
-  a.fancy:hover:after{
+  .fancy:hover:after{
     width: 100%;
   }
 
-  a.fancy1{
+  .fancy1{
     display: block;
     width: 200px;
     height: 40px;
@@ -103,19 +109,18 @@ input{
     font-family: sans-serif;
     text-decoration: none;
     color: #333;
-    border: 2px solid rgb(3, 3, 3);
     letter-spacing: 2px;
     text-align: center;
     position: relative;
     transition: all .35s;
   }
   
-  a.fancy1 span{
+  .fancy1 {
     position: relative;
     z-index: 2;
   }
   
-  a.fancy1:after{
+  button.fancy1:after{
     position: absolute;
     content: "";
     top: 0;
@@ -123,15 +128,18 @@ input{
     width: 0;
     height: 100%;
     background: rgb(0, 0, 0);
+    color:blue;
     transition: all .35s;
   }
   
-  a.fancy1:hover{
-    color: #fff;
+  button.fancy1:hover{
+    
+    color:blue;
   }
   
-  a.fancy1:hover:after{
+  button.fancy1:hover:after{
     width: 100%;
+    color:white;
   }
   
 

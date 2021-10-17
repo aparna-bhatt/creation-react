@@ -1,5 +1,5 @@
 import React from "react";
-import "./style2.css";
+import "./navbar2.css";
 
 function Navbar2()
 {
@@ -9,7 +9,6 @@ function Navbar2()
       <div className="container-fluid" style={{backgroundColor: "white", padding: "0"}}>
         <a
           className="navbar-brand"
-          href="Index.html"
           style={{
             fontFamily: "'Lobster', cursive",
             fontSize: "2.5rem",
@@ -32,19 +31,19 @@ function Navbar2()
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a href="" className="navi" style={{color: "red"}}><i class="far fa-arrow-alt-circle-right" style={{marginRight: "2px",color: "red"}}></i>Template</a>
+              <a  className="navi" style={{color: "red"}}><i class="far fa-arrow-alt-circle-right" style={{marginRight: "2px"}} className="navbar-selected navbar-form1"></i>Template</a>
             </li>
             <li className="nav-item">
-              <a href="Form2.html" className="navi"><i className="far fa-arrow-alt-circle-right" style={{marginRight: "2px"}}></i>Contact Details</a>
+              <a  className="navi"><i className="far fa-arrow-alt-circle-right" style={{marginRight: "2px"}} className="navbar-form2"></i>Contact Details</a>
             </li>
             <li class="nav-item">
-              <a href="" className="navi"><i className="far fa-arrow-alt-circle-right" style={{marginRight: "2px"}} ></i>Education</a>
+              <a  className="navi"><i className="far fa-arrow-alt-circle-right" style={{marginRight: "2px"}}className="navbar-form3" ></i>Education</a>
             </li>
             <li class="nav-item">
-              <a href="" className="navi"><i className="far fa-arrow-alt-circle-right" style={{marginRight: "2px"}}></i>Work history</a>
+              <a  className="navi"><i className="far fa-arrow-alt-circle-right" style={{marginRight: "2px"}} className="navbar-form4"></i>Work history</a>
             </li>
             <li class="nav-item">
-              <a href="" className="navi"><i className="far fa-arrow-alt-circle-right" style={{marginRight: "2px"}}></i>Skills</a>
+              <a  className="navi"><i className="far fa-arrow-alt-circle-right" style={{marginRight: "2px"}} className="navbar-form5"></i>Skills</a>
             </li>
           </ul>
         </div>
