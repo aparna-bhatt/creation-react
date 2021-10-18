@@ -47,20 +47,10 @@ input{
     height: 1rem;
 }
 
-.wrapper{
-    position: fixed;
-    top: 60%;
-    transform: translate(-50%, -50%);
-    width:200px;
-    left:131px;
-  }
-  button{
-      outline: none;
-      border: none;
-      text-decoration: none;
-  }
+
   
-  .fancy{
+  
+   .fancy{
     display: block;
     width: 200px;
     height: 40px;
@@ -100,7 +90,7 @@ input{
     width: 100%;
   }
 
-  .fancy1{
+  /* .fancy1{
     display: block;
     width: 200px;
     height: 40px;
@@ -127,19 +117,71 @@ input{
     left: 0;
     width: 0;
     height: 100%;
-    background: rgb(0, 0, 0);
-    color:blue;
+    color:red;
+    background: white;
+
     transition: all .35s;
   }
   
   button.fancy1:hover{
     
-    color:blue;
+    color:red;
   }
   
   button.fancy1:hover:after{
     width: 100%;
-    color:white;
+
+  } */
+
+  .wrapper{
+    position: fixed;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    width:200px;
+    left:131px;
+  }
+
+  button.fancy1{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    margin-top:-20px;
+    border: none;
+    background: none;
+  }
+  
+  button.fancy1 span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  button.fancy1:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: white;
+    color:black;
+    transition: all .35s;
+  }
+
+  button.fancy1:hover{
+    color:black;
+  }
+  
+  button.fancy1:hover:after{
+    width: 100%;
   }
   
 

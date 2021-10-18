@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import {Link} from "react-router-dom";
 import "./Signup.css";
 import Axios from "axios";
 
@@ -43,7 +43,9 @@ class Signup extends React.Component {
                         </h1>
                         <div className="container-signup">
                             <div className="wrapper-signup">
+                                <Link to="/login" style={{textDecoration:"none"}}>
                                 <button className="fancy1-signup" ><span>Login</span></button>
+                                </Link>
                             </div>
                         </div>
                     </div>

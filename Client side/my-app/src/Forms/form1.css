@@ -57,14 +57,18 @@
     display:flex;
     justify-content: space-around;
 }
+
 .first-selection{
-  margin-top:5px;
+  margin-top:10px;
+  flex-basis: 400vw;
 }
 .second-selection{
-    margin-top:5px;
+    margin-top:10px;
+    flex-basis: 844vw;
 }
 .third-selection{
-    margin-top:5px;
+    margin-top:10px;
+    flex-basis: 192vw;
 }
 .btns{
     height: 70vh;

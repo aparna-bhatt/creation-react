@@ -43,24 +43,38 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
   }
   .home-right-header-signup {
     margin: 0 20px;
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
+    border: 0;
+    background-color:white;
+    outline: none;
+      border: none;
+      text-decoration: none;
   }
   .home-right-header-signin {
     margin: 0 20px;
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
+    background-color:white;
+    outline: none;
+      border: none;
+      text-decoration: none;
   }
   
   .home-right-body-container {
     height: 90vh;
     display: flex;
     align-items: center;
+    background-color:white;
+    outline: none;
+      border: none;
+      text-decoration: none;
   }
   
   .home-image-1-container {

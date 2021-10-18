@@ -37,7 +37,7 @@ const Home = () => {
       <div className="home-right">
         <div className="home-right-header-container">
           <Link to="/Signup">
-          <button className="home-right-header-signup" >Sign Up</button>
+          <button style={{border:"none",outline:"none"}} className="home-right-header-signup" >Sign Up</button>
           </Link>
           <Link to="/Login">
           <button className="home-right-header-signin" > Sign In</button>

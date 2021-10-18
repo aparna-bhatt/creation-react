@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import {Link} from "react-router-dom";
 import "./Login.css";
 import Axios from "axios";
 Axios.defaults.withCredentials=true;
@@ -47,7 +47,9 @@ class Login extends React.Component {
                         </h1>
                         <div className="buttonplacer-login">
                             <div className="wrapper-login">
+                                <Link to="/signup" style={{textDecoration:"none"}}>
                                 <button className="fancy1-login"><span>Create Account</span></button>
+                                </Link>
                             </div>
                         </div>
                     </div>
