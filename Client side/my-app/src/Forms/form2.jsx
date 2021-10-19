@@ -13,9 +13,8 @@ class Form2 extends React.Component {
   state = {
     firstname: "",
     lastname: "",
-    profession: "",
-    city: "",
-    State: "",
+    about: "",
+    address:"",
     pincode: 0,
     email: "",
     phone: "",
@@ -54,14 +53,13 @@ class Form2 extends React.Component {
               <input type="text" value={this.state.lastname} required placeholder="LAST NAME" className="cont1 col"  onChange={(e) => this.setState({ lastname: e.target.value })}/>
             </div>
             <div class="row">
-              <input type="text"  value={this.state.profession} required placeholder="PROFESSION" className="cont1 col" onChange={(e) => this.setState({ profession: e.target.value })} />
+              <input type="text"  value={this.state.about} required placeholder="ABOUT" className="cont1 col" onChange={(e) => this.setState({ about: e.target.value })} />
             </div>
             <div class="row">
-              <input type="text"  value={this.state.city} required placeholder="CITY" className="cont1 col" onChange={(e) => this.setState({ city: e.target.value })} />
+              <input type="text"  value={this.state.address} required placeholder="address" className="cont1 col" onChange={(e) => this.setState({ address: e.target.value })} />
 
               <div className="col cont1" style={{ marginTop: "0" }}>
                 <div className="row">
-                  <input type="text" value={this.state.State} required placeholder="STATE" className="cont2 col" style={{ marginLeft: "0" }} onChange={(e) => this.setState({State: e.target.value })} />
                   <input type="text"  value={this.state.pincode} required placeholder="PINCODE" className="cont2 col" onChange={(e) => this.setState({ pincode: e.target.value })} />
                 </div>
               </div>

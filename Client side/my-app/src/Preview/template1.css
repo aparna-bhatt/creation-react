@@ -1,0 +1,212 @@
+
+.template1-container{
+    width: 100%;
+    margin: auto;
+    padding: 40px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    background-color: #211f1f;
+}
+
+.template1-main{
+    display: flex;
+}
+
+.template1-left{
+    background-color: #a6a6a6;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+}
+
+.template1-right{
+    background-color: #fff;
+    width: 70%;
+}
+
+.template1-top{
+    background-color: #bfbfbf;
+    height: 220px;
+}
+
+.template1-profile-pic{
+    /* height: 180px; */
+    margin-top: 10rem;
+}
+
+.template1-section-container{
+    padding: 20px 0;
+    color: #e8e8e8;
+    flex-basis: 30%;
+}
+
+.template1-contact{
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.template1-icon-btn{
+    background: none;
+    margin-left: 0.5rem;
+    margin-right:0.5rem ;
+    color: black;
+    border: none;
+    cursor:pointer;
+}
+
+.template1-icon-btn:hover{
+    color: white;
+}
+
+.template1-contact .label{
+    width: 100px;
+    color: #771179;
+    font-weight: 900;
+}
+
+.template1-address{
+    margin-left: 1rem;
+    width: 83%;
+    height: 10rem;
+}
+
+.template1-contact .value{
+    color: #e8e8e8
+}
+
+.template1-contact i{
+    font-size: 24px;
+}
+
+.template1-section-container .head{
+    font-size: 20px;
+    font-weight: 900;
+    color: #211f1f;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.template1-skill{
+    padding: 5px 0;
+    margin-top: 2rem;
+}
+
+.template1-skill-name{
+    padding-bottom: 10px;
+    color: #771179;
+    font-weight: bolder;
+}
+
+.template1-skill-desc{
+    
+}
+
+.template1-square{
+    height: 16px;
+    width: 16px;
+}
+
+.template1-purple{
+    background-color: #771179;
+}
+
+.template1-white{
+    background-color: #e8e8e8;
+}
+
+.template1-certification{
+   font-size: 14px;
+   padding: 10px 0;
+}
+
+.template1-profile-info{
+    position: relative;
+    top: 45%;
+    padding: 20px;
+}
+
+.template1-profile-info .name{
+    font-size: 36px;
+    color: #771179;
+    padding-bottom: 10px;
+}
+
+.template1-profile-info .title{
+    font-size: 28px;
+    color: #fff
+}
+
+.template1-content{
+    padding: 20px;
+}
+
+.template1-section{
+    padding: 10px 0;
+}
+
+.template1-section-head{
+    font-size: 20px;
+    color: #771179;
+    font-weight: 900;
+    padding-bottom: 20px;
+}
+
+.template1-content .template1-detail1{
+    font-weight: 900;
+}
+
+.template1-content p{
+    padding-bottom: 10px;
+}
+
+.template1-about-me .desc{
+    font-size: 16px;
+}
+
+.template1-experience ul{
+    list-style-type: none;
+    
+}
+
+.template1-experience ul li{
+    padding-bottom: 20px;
+    font-weight: 900;
+}
+
+.template1-content .detail2{
+    margin-top: 1rem;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.template1-label2{
+    margin: 1rem;
+    margin-left: 0;
+    font-size: 1rem;
+    font-weight: 900;
+
+    color: #771179;
+}
+
+.template1-detail3{
+    margin-top: 1rem;
+}
+
+.template1-detail4{
+        color: #a6a6a6;
+        margin: 0.5rem;
+}
+
+.template1-experience{
+    padding-bottom: 30rem;
+}
+
+
+
+
+

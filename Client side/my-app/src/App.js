@@ -74,9 +74,9 @@ function App() {
           <Route path="/form5" render={(props) => (isAuth() ? <Form5 {...props} old_data={{ form1: templateid, form2: personal, form3: education, form4: work }} /> : <Redirect to="/login" />)} />
           <Route path="/login" render={(props) => (<Login {...props} />)} />
           <Route path="/signup" render={(props) => (<Signup {...props} />)} />
-          <Route path="/template1" exact component={Template1} />
-          <Route path="/template2" exact component={Template2} />
-          <Route path="/template3" exact component={Template3} />
+          <Route path="/template1/:resmue_id" exact component={Template1} />
+          <Route path="/template2/:resume_id" exact component={Template2} />
+          <Route path="/template3/:resume_id" exact component={Template3} />
 
         </Switch>
       </Router>
