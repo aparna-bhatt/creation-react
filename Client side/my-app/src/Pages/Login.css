@@ -7,7 +7,7 @@
 /* left*/
 .left-login{
     flex-basis: 25%;
-    background-color:rgb(0, 231, 231) ;
+    background-color: #6ad5EF;
     min-height: 100vh;
     display:flex;
     flex-direction: column;
@@ -48,6 +48,8 @@
     margin-top:-20px;
     border: none;
     background: none;
+    border: solid 2px white;
+    color:white;
   }
   
   button.fancy1-login span{
@@ -110,7 +112,7 @@
     line-height: 1.25;
     font-weight: 400;
     margin-bottom: 5px;
-    margin-left: -4rem;
+    /* margin-left: -4rem; */
 }
 
 #sgnuptext{
@@ -130,8 +132,9 @@
 
 }
 
-#create-acc{
-    padding-left: 9rem;
+#create-acc-login{
+    padding-left: -1rem;
+    text-align: center;
 
 }
 

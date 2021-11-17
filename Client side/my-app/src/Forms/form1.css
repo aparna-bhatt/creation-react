@@ -60,15 +60,15 @@
 
 .first-selection{
   margin-top:10px;
-  flex-basis: 400vw;
+  /* flex-basis: 400vw; */
 }
 .second-selection{
     margin-top:10px;
-    flex-basis: 844vw;
+    /* flex-basis: 844vw; */
 }
 .third-selection{
     margin-top:10px;
-    flex-basis: 192vw;
+    /* flex-basis: 192vw; */
 }
 .btns{
     height: 70vh;
@@ -80,5 +80,6 @@
     display: flex;
     flex-direction: column;
     justify-content:space-between;
+    border: solid 2px white;
 }
 

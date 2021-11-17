@@ -1,7 +1,7 @@
 import React from "react";
 import "./form1.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 import Axios from "axios";
 Axios.defaults.withCredentials = true;
 
@@ -10,11 +10,21 @@ class Form1 extends React.Component {
         templateid: 0
     }
 
+
+    // window.onbeforeunload = function () {
+    //     return 'Are you really want to perform the action?';
+    //    }
+
     submitHandler = (e) => {
         e.preventDefault();
-        this.props.form1handler(this.state);
+        if(this.state.templateid!==0)
+        {this.props.form1handler(this.state);
         console.log(this.props);
-        this.props.history.push("/form2");
+        this.props.history.push("/form2");}
+        else
+        {
+            alert("please choose a template!");
+        }
         console.log(this.state);
     }
 
@@ -23,36 +33,40 @@ class Form1 extends React.Component {
             <>
                 <div className="form-container">
                     <div className="form-left">
-                        <h1 className="form-left-logo">Creation</h1>
+                        <Link to="/" style={{textDecoration:"none",color:"black"}}>
+                        <h1 className="form-left-logo">creation</h1>
+                        </Link>
                     </div>
                     <div className="form-right">
                         <div className="form-right-header-container">
-                            <a href="" className="navi" style={{ color: "red" }}><i class="far fa-arrow-alt-circle-right" style={{ marginRight: "2px", color: "red" }}></i>Template</a>
-                            <Link to="/form2" style={{ textDecoration: "none" }} className="navi"><i className="far fa-arrow-alt-circle-right" style={{ marginRight: "2px" }}></i>Contact Details</Link>
-                            <Link to="/form3" className="navi"><i className="far fa-arrow-alt-circle-right" style={{ marginRight: "2px" }} ></i>Education</Link>
-                            <Link to="/form4" className="navi"><i className="far fa-arrow-alt-circle-right" style={{ marginRight: "2px" }}></i>Work history</Link>
-                            <Link to="/form5" className="navi"><i className="far fa-arrow-alt-circle-right" style={{ marginRight: "2px" }}></i>Skills</Link>
+                            <Link className="navi" style={{ color: "red",marginRight:"19px" }}><i class="far fa-arrow-alt-circle-right" style={{ marginRight: "2px", color: "red" }}></i>Template</Link>
+                            <Link  to="/form2" style={{ textDecoration: "none",marginRight:"19px" }} className="navi"><i className="far fa-arrow-alt-circle-right" style={{ marginRight: "2px" }}></i>Contact Details</Link>
+                            <Link to="/form3" style={{marginRight:"19px"}} className="navi"><i className="far fa-arrow-alt-circle-right" style={{ marginRight: "2px" }} ></i>Education</Link>
+                            <Link to="/form4" style={{marginRight:"19px"}} className="navi"><i className="far fa-arrow-alt-circle-right" style={{ marginRight: "2px" }}></i>Work history</Link>
+                            <Link to="/form5" style={{marginRight:"19px"}} className="navi"><i className="far fa-arrow-alt-circle-right" style={{ marginRight: "2px" }}></i>Skills</Link>
                         </div>
                         <div className="image-container">
                             <div className="first-template">
-                                <img id="img1" src="./template1.png" alt="" srcset="" />
+                                <img id="img1" src="./template1.jpeg" alt="" srcset="" />
 
                             </div>
                             <div className="second-template">
-                                <img id="img2" src="./template4.png" alt="" srcset="" />
+                                <img id="img2" src="./template2.jpeg" alt="" srcset="" />
                             </div>
                             <div className="third-template">
                                 <img id="img3" src="./template3.png" alt="" srcset="" />
                             </div>
                         </div>
 
-                        <form action="#" method="post" className="selection">
+                        <form action="#" method="post" >
+                            <div className="selection" >
                                 <input type="radio" className="first-selection" name="template" value={1} onClick={(e) => { this.setState({ templateid: e.target.value }) }} />
 
                                 <input type="radio" name="template" className="second-selection" value={2} onClick={(e) => { this.setState({ templateid: e.target.value }) }} />
                             
                         
                                 <input type="radio" name="template" className="third-selection" value={3} onClick={(e) => { this.setState({ templateid: e.target.value }) }} />
+                                </div>
                         
                             <div className="container">
                                 <div className="row" style={{ width: "75%" }}>

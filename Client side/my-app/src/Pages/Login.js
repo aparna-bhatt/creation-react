@@ -17,8 +17,9 @@ class Login extends React.Component {
      }    
 
     submitHandler = (e) => {
+        
         e.preventDefault();
-        Axios.post("http://localhost:5000/Login",{
+        Axios.post("http://localhost:8000/Login",{
             data:{
              username:this.state.username,
              password:this.state.password
@@ -42,9 +43,11 @@ class Login extends React.Component {
             <>
                 <div className="main-cont">
                     <div className="left-login">
+                        <Link to="/" style={{textDecoration:"none",color:"black"}}>
                         <h1 className="login-logo" style={{ marginLeft: "25px" }}>
                             creation
                         </h1>
+                        </Link>
                         <div className="buttonplacer-login">
                             <div className="wrapper-login">
                                 <Link to="/signup" style={{textDecoration:"none"}}>
@@ -56,7 +59,7 @@ class Login extends React.Component {
                     <div className="right-login">
                         <div className="formcont-login">
                             <form action="#">
-                                <div className="row tittlebar-login" id="create-acc">
+                                <div className="row tittlebar-login" id="create-acc-login">
                                     <p className="tittletext-login">Welcome Back.</p>
                                     <p className="subtittletext-login" id="log-in">Use your registered Username and Password.</p>
                                 </div>

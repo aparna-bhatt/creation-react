@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&family=Ubuntu:wght@300;400&display=swap');
+
+.account-main{
+    display: flex;
+}
+
+.account-left{
+    min-height: 100vh;
+    /* flex-grow: 1; */
+    flex-basis: 20%;
+    background-color: #6ad5EF;
+    padding-left: 100px;
+}
+.account-left-logo{
+    height: 10vh;
+    padding: 10px 0;
+    font-family: 'Lobster', cursive;
+}
+.account-right{
+    flex-basis: 80%;
+}
+.account-right-heading{
+    display: flex;
+    justify-content: center;
+}
+
+.account-right-all-data{
+    display: flex;
+    flex-direction: column;
+}
+.account-right-head{
+    /* font-family: 'Lobster', cursive; */
+    /* margin-top: 5rem; */
+    margin-bottom: 5rem;
+    margin-top: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    /* text-decoration: underline; */
+}
+.account-without-data{
+    margin:auto;
+    width:50%;
+    color:purple;
+    margin-top:7rem;
+    margin-left:20rem;
+    font-size: 8rem;
+    
+}
+.account-without-data h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3rem;
+
+}
+.signature{
+    color:#6ad5EF;
+    margin:2rem 0 2rem 0;
+    
+}
+.create-main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    box-shadow: 0 4px 15px grey;
+    height:350px;
+    width:50%;
+    margin:auto;
+    line-height: 2;
+    font-family: 'Space Grotesk', sans-serif;
+    /* border-width:1rem; */
+}
+.create-h1{
+    line-height: 2;
+}
+.link-to-form1{
+    text-decoration: none;
+    font-size: 1.5rem;
+   
+}

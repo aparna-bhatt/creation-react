@@ -1,16 +1,36 @@
 import React from "react";
 import { useState } from "react";
 import {Link} from "react-router-dom";
+import { useHistory } from "react-router";
+import Axios from "axios";
 import "./Home.css";
+Axios.defaults.withCredentials=true;
 // import Modal1 from "../modal1";
 // import Modal2 from "../modal2";
 
+
 const Home = () => {
+const history=useHistory();
+
+  const logoutHandler=()=>{
+    Axios.get("http://localhost:8000/logout").then((res)=>{
+      if(res.data==true){
+        sessionStorage.removeItem("auth");
+        history.push("/")
+      }
+    }).catch((err)=>{
+      console.log(err);
+    })
+  }
+
+  const accountHandler=()=>{
+    history.push("/profile");
+  }
 
   return (
     <div className="home-container">
       <div className="home-left">
-        <h1 className="home-left-logo">Creation</h1>
+        <h1 className="home-left-logo">creation</h1>
         <div className="home-left-main-container">
           <h1 className="home-left-heading">
             Create your perfect resume with Creation
@@ -34,21 +54,29 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="home-right">
+      < div className="home-right">
         <div className="home-right-header-container">
+        {!sessionStorage.getItem("auth")&&
+          <>
           <Link to="/Signup">
           <button style={{border:"none",outline:"none"}} className="home-right-header-signup" >Sign Up</button>
           </Link>
           <Link to="/Login">
           <button className="home-right-header-signin" > Sign In</button>
           </Link>
+          </>
+}
+{sessionStorage.getItem("auth")&&<button className="home-right-header-logout" onClick={()=>logoutHandler()}>Sign Out</button>}
+{sessionStorage.getItem("auth")&&<button className="home-right-header-logout" onClick={()=>accountHandler()}>Account</button>}
         </div>
+
+
         <div className="home-right-body-container">
           <div className="home-image-1-container">
-            <img className="home-image-1" src="./template1.png"></img>
+            <img className="home-image-1" src="./template1.jpeg"></img>
           </div>
           <div className="home-image-2-container">
-            <img className="home-image-2" src="./template2.png"></img>
+            <img className="home-image-2" src="./template2.jpeg"></img>
           </div>
           <div className="home-image-3-container">
             <img className="home-image-3" src="./template3.png"></img>

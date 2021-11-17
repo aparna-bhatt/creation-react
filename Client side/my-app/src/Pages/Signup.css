@@ -7,7 +7,7 @@
 /* left*/
 .left-signup{
     flex-basis: 25%;
-    background-color:rgb(0, 231, 231) ;
+    background-color: #6ad5EF;
     min-height: 100vh;
     display:flex;
     flex-direction: column;
@@ -23,6 +23,7 @@
     top: 60%;
     left: 9%;
     transform: translate(-50%, -50%);
+    /* border:2px solid black; */
   }
   .formcont-signup{
     width: 75%;
@@ -45,9 +46,11 @@
     text-align: center;
     position: relative;
     transition: all .35s;
-    margin-top:-13px;
+    margin-top:-20px;
     border: none;
     background: none;
+    border: solid 2px white;
+    color:white;
   }
   
   button.fancy1-signup span{
@@ -62,13 +65,15 @@
     left: 0;
     width: 0;
     height: 100%;
-    background:black;
-    color:white;
+    background:white;
+    color:black;
+    
+    
     transition: all .35s;
   }
 
   button.fancy1-signup:hover{
-    color:white;
+    color:black;
   }
   
   button.fancy1-signup:hover:after{
@@ -131,7 +136,7 @@
 }
 
 #create-acc{
-    padding-left: 9rem;
+    padding-left: 6.2rem;
 
 }
 

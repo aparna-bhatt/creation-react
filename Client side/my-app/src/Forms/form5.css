@@ -8,7 +8,7 @@
   .form5-left {
     min-height: 100vh;
     /* flex-grow: 1; */
-    flex-basis: 20%;
+    flex-basis: 25%;
     background-color: #6ad5EF;
     padding-left: 100px;
   }
@@ -72,6 +72,8 @@ img{
     margin-top:-20px;
     border: none;
     background: none;
+    border: solid 2px white;
+    color:white;
   }
   
   button.fancy1 span{

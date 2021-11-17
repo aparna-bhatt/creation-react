@@ -4,6 +4,7 @@ const helmet = require("helmet");
 const cookieparser = require("cookie-parser");
 const cors = require("cors");
 const mysql = require("mysql");
+const { log } = require("console");
 
 const app = express();
 app.use(cors({
@@ -73,8 +74,11 @@ app.post("/signup", (req, res) => {
         }
     })
 })
-app.get("/Logout", (req, res) => {
-    res.clearCookie();
+app.get("/logout", (req, res) => {
+    res.clearCookie("email");
+    res.clearCookie("auth");
+    console.log("birju");
+    res.send(true);
 })
 
 app.get("/isAuth", (req, res) => {
@@ -87,21 +91,12 @@ app.get("/isAuth", (req, res) => {
     }
 })
 
-// app.post("/form1",(req,res)=>{
-//     console.log(req.body.data);
-//     db.query("INSERT INTO `resumes`(`template_id`, `email`) VALUES (?,?)",[req.body.data.templateid,req.cookies.email],(err,result)=>{
-//         if(err)
-//         {
-//             console.log(err);
-//         }
-//         res.send(true);
-//     })
-
-// })
 let resume_id = 5;
 app.post("/form5", (req, response) => {
-   // console.log(req.body.data);
-    db.query("INSERT INTO `resumes`(`template_id`, `email`) VALUES (?,?)", [req.body.data.form1.templateid, req.cookies.email]);
+   console.log(req.body.data);
+   var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+(today.getDate()+1);
+    db.query("INSERT INTO `resumes`(`template_id`, `email`,`created_date`) VALUES (?,?,?)", [req.body.data.form1.templateid, req.cookies.email,date]);
     db.query("SELECT resume_id FROM resumes WHERE resume_id=(SELECT max(resume_id) FROM resumes)", (err, res) => {
         if (res.length > 0) {
             resume_id = (res[0].resume_id);
@@ -113,7 +108,7 @@ app.post("/form5", (req, response) => {
                 db.query("INSERT INTO `skills`(`resume_id`, `skill_id`, `skill_name`, `skill_desc`) VALUES (?,?,?,?)", [resume_id, i + 1, req.body.data.form5[i].skill, req.body.data.form5[i].desc])
             }
 
-            db.query("INSERT INTO `education`( `resume_id`,`institute_name`, `institute_location`, `degree`, `specialization`, `start_date`, `graduation_date`) VALUES (?,?,?,?,?,?,?)", [resume_id, req.body.data.form3.institue, req.body.data.form3.location, req.body.data.form3.degree, req.body.data.form3.field, req.body.data.form3.startdate, req.body.data.form3.graduation]);
+            db.query("INSERT INTO `education`( `resume_id`,`institute_name`, `institute_location`, `degree`, `specialization`, `start_date`, `graduation_date`) VALUES (?,?,?,?,?,?,?)", [resume_id, req.body.data.form3.institute, req.body.data.form3.location, req.body.data.form3.degree, req.body.data.form3.field, req.body.data.form3.startdate, req.body.data.form3.graduation]);
             response.send({resume_id:resume_id});
           //  console.log(resume_id);
         }
@@ -157,6 +152,7 @@ console.log(req.params,"hello");
                 }
                 else {
                     data.form3=res[0];
+                    console.log(res);
                 }
             });
             db.query("SELECT * FROM work WHERE resume_id=?",[req.params.resumeid], (err, res) => {
@@ -167,6 +163,7 @@ console.log(req.params,"hello");
                 else {
                     
                         data.form4=res;
+                        console.log(res);
                 }
             });
             db.query("SELECT * FROM skills WHERE resume_id=?",[req.params.resumeid], (err, res) => {
@@ -177,6 +174,7 @@ console.log(req.params,"hello");
                 else {
                     
                         data.form5=res;
+                        console.log(res);
                         response.send(data);
                 }
             });
@@ -191,6 +189,62 @@ console.log(req.params,"hello");
 
 })
 
-app.listen(process.env.Port || 5000, (req, res) => {
-    console.log("server is running at port 5000");
+
+app.get("/profile",(req,res)=>{
+    // var email=req.cookies.email;
+    db.query("SELECT resume_id,created_date FROM resumes WHERE email=?",[req.cookies.email],(err,result)=>{
+        if(err)
+        {console.log(err);
+            res.send(false);
+        }
+        else
+       { console.log(result);
+        res.send(result);
+       }
+    })
+    // res.send(true);
+
+})
+
+app.get("/template/delete/:resume_id",(req,res)=>{
+    var r=req.params.resume_id;
+    console.log(r);
+    db.query("DELETE FROM education WHERE resume_id=?",[r],(err,result)=>{
+        if(err)
+        console.log(err);
+        else
+        console.log(result);
+    })
+    db.query("DELETE FROM contact WHERE resume_id=?",[r],(err,result)=>{
+        if(err)
+        console.log(err);
+        else
+        console.log(result);
+    })
+    db.query("DELETE FROM skills WHERE resume_id=?",[r],(err,result)=>{
+        if(err)
+        console.log(err);
+        else
+        console.log(result);
+    })
+    db.query("DELETE FROM work WHERE resume_id=?",[r],(err,result)=>{
+        if(err)
+        console.log(err);
+        else
+        { console.log(result);
+            db.query("DELETE FROM resumes WHERE resume_id=?",[r],(err,result)=>{
+                if(err)
+                console.log(err);
+                else
+                console.log(result);
+            })
+        }
+       
+    })
+    
+    res.send(true);
+})
+
+app.listen(process.env.Port || 8000, (req, res) => {
+    console.log("server is running at port 8000");
 })

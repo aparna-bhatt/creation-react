@@ -11,7 +11,7 @@ class Signup extends React.Component {
     }
     submitHandler=(e)=>{
         e.preventDefault();
-        Axios.post("http://localhost:5000/Signup",{
+        Axios.post("http://localhost:8000/Signup",{
             data:{
                 username:this.state.username,
                 password:this.state.password,
@@ -37,10 +37,11 @@ class Signup extends React.Component {
             <>
                 <div className="main-cont-signup">
                     <div className="left-signup">
-
+                           <Link to="/" style={{textDecoration:"none",color:"black"}}>
                         <h1 className="signup-logo" style={{ marginLeft: "25px" }}>
                             creation
                         </h1>
+                        </Link>
                         <div className="container-signup">
                             <div className="wrapper-signup">
                                 <Link to="/login" style={{textDecoration:"none"}}>
@@ -68,7 +69,7 @@ class Signup extends React.Component {
                 <input type="password" value={this.state.password} required placeholder="PASSWORD" className="cont1-signup col"  onChange={(e)=>this.setState({password:e.target.value})}/>
             </div>
             <div className="row">
-              <button type="submit" className="btn btn-success btnsub" value="submit" type="submit" onClick={this.submitHandler}><span>Signup</span></button>
+              <button type="submit" className="btn btn-success btnsub" value="submit" type="submit" onClick={this.submitHandler}><span>Create</span></button>
               <button type="reset" className="btn btn-dark btnsub" value="reset"><span>Reset</span></button>
             </div>
         </form>
