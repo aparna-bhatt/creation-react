@@ -1,8 +1,9 @@
-## hello
+## Steps to get started 
 
-## steps to get started 
-
-## cd Client side
-## cd my-app
-## npm i
-## npm start
+ cd Client side
+ #
+ cd my-app
+ #
+ npm i
+ #
+ npm start
